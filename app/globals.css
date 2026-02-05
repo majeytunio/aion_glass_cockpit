@@ -118,7 +118,9 @@ body {
     --cockpit-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     --cockpit-subtle-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     --cockpit-accent: 221 83% 53%;
-    --cockpit-footer: 0 0% 17%;
+    /* --cockpit-footer: 0 0% 96%; */
+    --cockpit-footer: 0 0% 85%; /* Light grey */
+    --cockpit-grey: 220 14% 96%;
     --cockpit-status: 221 83% 53%;
     --cockpit-tile-bg: 210 40% 98%;
     --cockpit-runner-hover: 220 14% 96%;

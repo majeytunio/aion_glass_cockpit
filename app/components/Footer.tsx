@@ -3,7 +3,7 @@
 export const Footer = () => {
   return (
     <div 
-      className="fixed bottom-0 left-0 right-0 h-9 flex items-center z-50"
+      className="fixed bottom-2 left-2 right-2 h-9 flex items-center z-50 p-7 gap-1.5 rounded-xl shadow-lg"
       style={{ background: 'hsl(var(--cockpit-footer))' }}
     >
       {/* Left Edge Button - floats left */}

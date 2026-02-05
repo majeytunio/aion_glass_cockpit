@@ -1,6 +1,9 @@
 import { RaceButton } from './RaceButtonProps';
 import { UpcomingTile } from './UpComingTile';
 import { ControlInput } from './ControlInput';
+
+import Image from 'next/image';
+
 const UI_VERSION = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '_V01';
 const upcomingRaces = [
   { trackCode: 'SHATI', raceNo: 1, ttm: '1m' },
@@ -33,7 +36,7 @@ export const HeaderRealm = () => {
         {/* Center: Controls Block */}
         <div className="flex flex-col gap-2.5 ml-8">
           {/* Row 1: Upcoming Tiles */}
-          <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(6, 96px)' }}>
+          <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(6, 114px)' }}>
             {upcomingRaces.map((race, i) => (
               <UpcomingTile
                 key={i}
@@ -45,7 +48,7 @@ export const HeaderRealm = () => {
             ))}
           </div>
           {/* Row 2: Action Tiles + Search */}
-          <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(9, 44px) 220px' }}>
+          <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(4, 100px) 300px' }}>
             {Array.from({ length: 9 }, (_, i) => (
               <div key={i} className="h-9 rounded-xl bg-secondary" />
             ))}
@@ -58,8 +61,17 @@ export const HeaderRealm = () => {
         </div>
         {/* Right: Status + Version */}
         <div className="text-right ml-6">
-          <div className="text-sm font-black tracking-[0.18em] text-primary">PULSE</div>
-          <div className="text-xs font-bold text-muted-foreground">{UI_VERSION}</div>
+          <>
+          <Image
+            src="/aion_logo.png"
+            alt="Pulse Icon"
+            width={50}
+            height={50}
+            className="mx-auto mb-1"
+          />
+          <div className="text-sm font-black tracking-[0.18em] text-primary text-center">PULSE</div>
+          <div className="text-xs font-bold text-muted-foreground text-center">{UI_VERSION}</div>
+          </>
         </div>
       </div>
       {/* 2x2 Input Grid */}
