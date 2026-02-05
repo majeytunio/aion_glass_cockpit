@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,199 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+
+/* ======================================================
+   Tailwind v4 entry (REQUIRED)
+====================================================== */
+@import "tailwindcss";
+
+/* ======================================================
+   Theme → Tailwind utility bridge (v4 replacement
+   for tailwind.config.js)
+====================================================== */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+/* ======================================================
+   Base Tokens
+====================================================== */
+@layer base {
+  :root {
+    --background: 220 14% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Cockpit */
+    --cockpit-bg: 220 14% 97%;
+    --cockpit-card: 0 0% 100%;
+    --cockpit-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --cockpit-subtle-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    --cockpit-accent: 221 83% 53%;
+    --cockpit-footer: 0 0% 17%;
+    --cockpit-status: 221 83% 53%;
+    --cockpit-tile-bg: 210 40% 98%;
+    --cockpit-runner-hover: 220 14% 96%;
+  }
+
+  /* ================= Dark Mode ================= */
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 213 27% 84%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* ======================================================
+   Components
+====================================================== */
+@layer components {
+  .cockpit-card {
+    @apply bg-card rounded-3xl;
+    box-shadow: var(--cockpit-card-shadow);
+  }
+
+  .cockpit-runner-card {
+    @apply bg-card rounded-2xl;
+    box-shadow: var(--cockpit-subtle-shadow);
+  }
+
+  .race-btn {
+    @apply w-9 h-9 rounded-xl border border-border bg-card
+      flex items-center justify-center text-xs font-extrabold
+      tracking-wide cursor-pointer transition-all;
+  }
+
+  .race-btn:hover {
+    @apply bg-muted;
+  }
+
+  .runner-btn {
+    @apply w-11 h-11 rounded-xl border border-border bg-card
+      text-foreground font-black text-sm p-0
+      cursor-pointer transition-all;
+  }
+
+  .runner-btn:hover {
+    @apply bg-muted;
+  }
+
+  .upcoming-tile {
+    @apply relative min-w-[95px] h-[46px]
+      rounded-xl border border-border bg-card p-2
+      flex flex-col justify-center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .control-input {
+    @apply h-9 rounded-xl border border-border
+      px-3 font-bold bg-muted text-foreground;
+  }
+
+  .footer-btn {
+    @apply h-9 min-w-[108px] bg-secondary
+      border border-muted-foreground/30 cursor-pointer;
+  }
+
+  .column-header {
+    @apply bg-muted border border-border rounded-xl
+      text-xs font-bold tracking-widest
+      text-muted-foreground uppercase;
+  }
 }
