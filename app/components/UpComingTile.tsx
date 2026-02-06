@@ -54,7 +54,7 @@ export const UpcomingTile = ({ trackCode, raceNo, ttm, countryCode = 'HK', isEmp
       case 'AU':
         return 'https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg';
       case 'UK':
-        return 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg';
+        return 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_England.svg';
       case 'US':
         return 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg';
       case 'JP':
