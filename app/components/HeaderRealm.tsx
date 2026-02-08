@@ -511,12 +511,12 @@ const upcomingRaces = [
   { trackCode: 'SHATI', raceNo: 4, ttm: '106m', countryCode: 'HK' },
   { trackCode: 'SHATI', raceNo: 5, ttm: '141m', countryCode: 'HK' },
   { trackCode: 'SHATI', raceNo: 6, ttm: '176m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 7, ttm: '211m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 8, ttm: '246m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 9, ttm: '281m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 10, ttm: '316m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 11, ttm: '351m', countryCode: 'HK' },
-  { trackCode: 'SHATI', raceNo: 12, ttm: '386m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 7, ttm: '211m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 8, ttm: '246m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 9, ttm: '281m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 10, ttm: '316m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 11, ttm: '351m', countryCode: 'HK' },
+  // { trackCode: 'SHATI', raceNo: 12, ttm: '386m', countryCode: 'HK' },
 ];
 
 export const HeaderRealm = () => {
@@ -545,7 +545,7 @@ export const HeaderRealm = () => {
             <div className="w-9 h-9 rounded-md bg-muted flex items-center justify-center ml-3">
               ☁️
             </div>
-            {Array.from({ length: 10 }, (_, i) => (
+            {Array.from({ length: 12 }, (_, i) => (
               <RaceButton
                 key={i + 1}
                 number={i + 1}
@@ -574,7 +574,8 @@ export const HeaderRealm = () => {
             {/* UPCOMING RACES - Row 1 */}
             <div
               className="grid gap-2.5 justify-end"
-              style={{ gridTemplateColumns: 'repeat(12, 90px)' }}
+              // style={{ gridTemplateColumns: 'repeat(6, 191px)' }}
+              style={{ gridTemplateColumns: 'repeat(6, 104px)' }}
             >
               {upcomingRaces.map((race, i) => (
                 <UpcomingTile
@@ -591,7 +592,8 @@ export const HeaderRealm = () => {
             {/* ACTION BUTTONS - Row 2 (10 buttons) */}
             <div
               className="grid gap-2 justify-end"
-              style={{ gridTemplateColumns: 'repeat(10, 112px)' }}
+              // style={{ gridTemplateColumns: 'repeat(10, 112px)' }}
+              style={{ gridTemplateColumns: 'repeat(10, 60px)' }}
             >
               {Array.from({ length: 10 }, (_, i) => (
                 <div
@@ -604,7 +606,8 @@ export const HeaderRealm = () => {
             {/* ACTION BUTTONS + SEARCH - Row 3 (5 buttons + search) */}
             <div
               className="grid gap-2 justify-end"
-              style={{ gridTemplateColumns: 'repeat(5, 112px) 592px' }}
+              // style={{ gridTemplateColumns: 'repeat(5, 112px) 592px' }}
+              style={{ gridTemplateColumns: 'repeat(5, 60px) 332px' }}
             >
               {Array.from({ length: 5 }, (_, i) => (
                 <div
@@ -621,7 +624,7 @@ export const HeaderRealm = () => {
           </div>
 
           {/* BRAND COLUMN */}
-          <div className="text-right flex flex-col items-center">
+          <div className="text-right flex flex-col items-center ps-10">
             <div className="text-sm font-black tracking-[0.18em] text-primary">
               PULSE
             </div>
