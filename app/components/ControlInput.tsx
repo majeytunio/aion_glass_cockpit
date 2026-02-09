@@ -10,7 +10,8 @@ interface ControlInputProps {
 export const ControlInput = ({ label, value, size, onChange, placeholder }: ControlInputProps) => {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[10px] font-black tracking-wider text-muted-foreground uppercase">
+      {/* <label className="text-[10px] font-black tracking-wider text-muted-foreground uppercase"> */}
+      <label className="text-[12px] font-black tracking-wider text-muted-foreground uppercase">
         {label}
       </label>
       <input
