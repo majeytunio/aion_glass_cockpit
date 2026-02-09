@@ -1310,7 +1310,7 @@ export const HeaderRealm = () => {
             </div>
 
             {/* ROW 2 CONTENT - Action Buttons + Search */}
-            <div className="pt-10 flex-grow">
+            <div className="flex-grow">
               {/* 10 Action Buttons */}
               <div className="grid grid-cols-10 gap-1.5 mb-3">
                 {Array.from({ length: 10 }, (_, i) => (
@@ -1322,7 +1322,7 @@ export const HeaderRealm = () => {
               </div>
 
               {/* 5 Action Buttons + Search */}
-              <div className="grid grid-cols-6 gap-1.5">
+              <div className="grid grid-cols-10 gap-1.5">
                 {Array.from({ length: 5 }, (_, i) => (
                   <div
                     key={i}
@@ -1332,7 +1332,7 @@ export const HeaderRealm = () => {
                 <input
                   type="text"
                   placeholder="Search…"
-                  className="h-8 rounded-lg border border-border px-3 font-semibold col-span-1"
+                  className="h-8 rounded-lg border border-border px-3 font-semibold col-span-5"
                 />
               </div>
             </div>
@@ -1342,17 +1342,17 @@ export const HeaderRealm = () => {
         {/* COLUMN 3 - Takes 1 column for PULSE Logo, Rowspan 2 */}
         <div className="col-span-1 row-span-2">
           <div className="flex flex-col items-center justify-start h-full">
-            <div className="text-sm font-black tracking-[0.18em] text-primary mb-1">
+            <div className="text-[18pt] font-black tracking-[0.18em] text-primary mb-1">
               PULSE
             </div>
-            <div className="text-xs font-bold text-muted-foreground mb-3">
+            <div className="text-[12pt] font-bold text-muted-foreground mb-3">
               {UI_VERSION}
             </div>
-            <div className="w-10 h-10 bg-secondary rounded-md flex items-center justify-center border border-border">
+            <div className="w-25 h-25 flex items-center justify-center">
               <img
                 src="/aion_logo.png"
                 alt="Aion Logo"
-                className="w-10 h-10 object-cover"
+                className="w-23 h-23 object-cover"
               />
             </div>
           </div>
