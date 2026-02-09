@@ -553,13 +553,46 @@ export const HeaderRealm = () => {
               />
             ))}
           </div>
+
+
+          {/* RACE DETAILS SECTION - Separate row below everything */}
+          <div className="pt-5 mt-4">
+            {/* Row 1: 7 controls */}
+            <div className="grid grid-cols-8 gap-3 mb-3" style={{ gridTemplateColumns: 'repeat(7, 152px)' }}>
+              <ControlInput label="Post Time" value="14:00" size="small" />
+              <ControlInput label="Surface" value="TURF" size="small" />
+              <ControlInput label="Distance" value="1600m" size="small" />
+              <ControlInput label="Rail Pos" value="A" size="small" />
+              <ControlInput label="Going" value="GOOD" size="small" />
+              <ControlInput label="Grade" value="3" size="small" />
+              <ControlInput label="Prize Money" value="$1,200,000" size="small" />
+            </div>
+            
+            {/* Row 2: 14 controls - using flex wrap for responsiveness */}
+            <div className="grid grid-cols-8 gap-3 mb-3" style={{ gridTemplateColumns: 'repeat(14, 70px)' }}>
+              <ControlInput label="Benchmark" value="80" size="small" />
+              <ControlInput label="Level" value="3" size="small" />
+              <ControlInput label="RQ" value="115" size="small" />
+              <ControlInput label="STD Time" value="1:34.5" size="small" />
+              <ControlInput label="FIN Time" value="1:33.8" size="small" />
+              <ControlInput label="RSPD" value="+0.7" size="small" />
+              <ControlInput label="TRKSPD" value="+0.5" size="small" />
+              <ControlInput label="+/- STD" value="+0.2" size="small" />
+              <ControlInput label="Tempo" value="SLOW" size="small" />
+              <ControlInput label="QR2" value="23.5" size="small" />
+              <ControlInput label="QR3" value="34.8" size="small" />
+              <ControlInput label="QR4" value="24.2" size="small" />
+              <ControlInput label="$ENT" value="2.5M" size="small" />
+              <ControlInput label="$ELA" value="1.8M" size="small" />
+            </div>
+          </div>
         </div>
 
 
         {/* LEFT: CONTROL INPUTS (2x2 vertical) */}
         <div className="flex items-start gap-6">
           {/* Control Inputs Grid */}
-          <div className="grid gap-x-5 gap-y-3.5" style={{ gridTemplateColumns: '200px 200px 200px 200px' }}>
+          <div className="grid gap-x-5 gap-y-3.5" style={{ gridTemplateColumns: 'repeat(4, 170px)' }}>
             <ControlInput label="Territory" value="HK" />
             <ControlInput label="Date" value={today} />
             <ControlInput label="Code" value="RACE001" />
