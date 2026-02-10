@@ -1249,10 +1249,15 @@ export const HeaderRealm = () => {
             {/* 4 Control Inputs - Column 7-12 */}
             <div className="col-span-5">
               <div className="grid grid-cols-4 gap-3">
-                <ControlInput label="Territory" value="HK" size="medium" />
+                {/* <ControlInput label="Territory" value="HK" size="medium" />
                 <ControlInput label="Date" value={today} size="medium" />
                 <ControlInput label="Code" value="RACE001" size="medium" />
-                <ControlInput label="Track" value="SHATIN" size="medium" />
+                <ControlInput label="Track" value="SHATIN" size="medium" /> */}
+
+                <ControlInput label="Territory" value="" size="medium" />
+                <ControlInput label="Date" value="" size="medium" />
+                <ControlInput label="Code" value="" size="medium" />
+                <ControlInput label="Track" value="" size="medium" />
               </div>
             </div>
           </div>
@@ -1261,18 +1266,39 @@ export const HeaderRealm = () => {
           <div className="pt-4">
             {/* Row 1: 7 controls */}
             <div className="grid grid-cols-7 gap-2 mb-3">
-              <ControlInput label="Post Time" value="14:00" size="small" />
+              <ControlInput label="Post Time" value="" size="small" />
+              <ControlInput label="Surface" value="" size="small" />
+              <ControlInput label="Distance" value="" size="small" />
+              <ControlInput label="Rail Pos" value="" size="small" />
+              <ControlInput label="Going" value="" size="small" />
+              <ControlInput label="Grade" value="" size="small" />
+              <ControlInput label="Prize Money" value="" size="small" />
+              {/* <ControlInput label="Post Time" value="14:00" size="small" />
               <ControlInput label="Surface" value="TURF" size="small" />
               <ControlInput label="Distance" value="1600m" size="small" />
               <ControlInput label="Rail Pos" value="A" size="small" />
               <ControlInput label="Going" value="GOOD" size="small" />
               <ControlInput label="Grade" value="3" size="small" />
-              <ControlInput label="Prize Money" value="$1,200,000" size="small" />
+              <ControlInput label="Prize Money" value="$1,200,000" size="small" /> */}
             </div>
             
             {/* Row 2: 14 controls */}
             <div className="grid grid-cols-14 gap-2">
-              <ControlInput label="Benchmark" value="80" size="small" />
+              <ControlInput label="Benchmark" value="" size="small" />
+              <ControlInput label="Level" value="" size="small" />
+              <ControlInput label="RQ" value="" size="small" />
+              <ControlInput label="STD Time" value="" size="small" />
+              <ControlInput label="FIN Time" value="" size="small" />
+              <ControlInput label="RSPD" value="" size="small" />
+              <ControlInput label="TRKSPD" value="" size="small" />
+              <ControlInput label="+/- STD" value="" size="small" />
+              <ControlInput label="Tempo" value="" size="small" />
+              <ControlInput label="QR2" value="" size="small" />
+              <ControlInput label="QR3" value="" size="small" />
+              <ControlInput label="QR4" value="" size="small" />
+              <ControlInput label="$ENT" value="" size="small" />
+              <ControlInput label="$ELA" value="" size="small" />
+              {/* <ControlInput label="Benchmark" value="80" size="small" />
               <ControlInput label="Level" value="3" size="small" />
               <ControlInput label="RQ" value="115" size="small" />
               <ControlInput label="STD Time" value="1:34.5" size="small" />
@@ -1285,7 +1311,7 @@ export const HeaderRealm = () => {
               <ControlInput label="QR3" value="34.8" size="small" />
               <ControlInput label="QR4" value="24.2" size="small" />
               <ControlInput label="$ENT" value="2.5M" size="small" />
-              <ControlInput label="$ELA" value="1.8M" size="small" />
+              <ControlInput label="$ELA" value="1.8M" size="small" /> */}
             </div>
           </div>
         </div>
@@ -1312,7 +1338,7 @@ export const HeaderRealm = () => {
             {/* ROW 2 CONTENT - Action Buttons + Search */}
             <div className="flex-grow">
               {/* 10 Action Buttons */}
-              <div className="grid grid-cols-10 gap-1.5 mb-3">
+              <div className="grid grid-cols-10 gap-1.5 mb-3 mt-10">
                 {Array.from({ length: 10 }, (_, i) => (
                   <div
                     key={i}
@@ -1322,7 +1348,7 @@ export const HeaderRealm = () => {
               </div>
 
               {/* 5 Action Buttons + Search */}
-              <div className="grid grid-cols-10 gap-1.5">
+              <div className="grid grid-cols-10 gap-1.5 mt-10">
                 {Array.from({ length: 5 }, (_, i) => (
                   <div
                     key={i}
