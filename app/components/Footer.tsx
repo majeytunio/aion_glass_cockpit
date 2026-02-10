@@ -237,7 +237,7 @@ export const Footer = () => {
       className="fixed bottom-2 left-2 right-2 flex items-center z-50 gap-3 rounded-xl shadow-lg"
       style={{ 
         background: 'hsl(var(--cockpit-footer))',
-        height: '54px', // 36px × 1.5 = 54px
+        height: '80px', // 36px × 1.5 = 54px
         padding: '0 40px' // 28px × 1.5 ≈ 40px
       }}
     >
@@ -245,7 +245,7 @@ export const Footer = () => {
       <button 
         className="footer-btn flex-shrink-0 flex items-center justify-center px-6"
         title="Control Tower"
-        style={{ height: '42px', width: '60px' }} // ~50% increase from default
+        style={{ height: '65px', width: '60px' }} // ~50% increase from default
       >
         <Icon path={mdiTowerFire} size={2.25} />
       </button>
@@ -259,7 +259,7 @@ export const Footer = () => {
             title={button.title}
             style={{ 
               maxWidth: '162px', // 108px × 1.5 = 162px
-              height: '42px',
+              height: '65px',
               padding: '0 20px'
             }}
           >
@@ -272,7 +272,7 @@ export const Footer = () => {
       <button 
         className="footer-btn flex-shrink-0 flex items-center justify-center px-6"
         title="QR Modelling Suite"
-        style={{ height: '42px', width: '60px' }}
+        style={{ height: '65px', width: '60px' }}
       >
         <Icon path={mdiQrcode} size={2.25} />
       </button>
