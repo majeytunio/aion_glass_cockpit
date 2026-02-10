@@ -1573,7 +1573,7 @@ export const HeaderRealm = () => {
             {/* ROW 2 CONTENT - Action Buttons + Search */}
             <div className="flex-grow">
               {/* Market Buttons (1-5) */}
-              <div className="grid grid-cols-5 gap-1.5 mb-2">
+              <div className="grid grid-cols-10 gap-1.5 mb-2 mt-14">
                 {marketButtons.map((button, index) => (
                   <button
                     key={index}
@@ -1583,10 +1583,7 @@ export const HeaderRealm = () => {
                     <Icon path={button.icon} size={1} />
                   </button>
                 ))}
-              </div>
 
-              {/* Search Filter Buttons (6-10) */}
-              <div className="grid grid-cols-5 gap-1.5 mb-3">
                 {searchButtons.map((button, index) => (
                   <button
                     key={index}
@@ -1599,7 +1596,7 @@ export const HeaderRealm = () => {
               </div>
 
               {/* Status Buttons (11-15) */}
-              <div className="grid grid-cols-5 gap-1.5 mb-3">
+              <div className="grid grid-cols-10 gap-1.5 mb-3 mt-10">
                 {statusButtons.map((button, index) => (
                   <button
                     key={index}
@@ -1609,15 +1606,15 @@ export const HeaderRealm = () => {
                     <Icon path={button.icon} size={1} />
                   </button>
                 ))}
+                <input
+                  type="text"
+                  placeholder="Search…"
+                  className="h-8 rounded-lg border border-border px-3 font-semibold col-span-5"
+                />
               </div>
 
               {/* Search Input */}
               <div className="mt-2">
-                <input
-                  type="text"
-                  placeholder="Search…"
-                  className="h-8 rounded-lg border border-border px-3 font-semibold w-full"
-                />
               </div>
             </div>
           </div>
