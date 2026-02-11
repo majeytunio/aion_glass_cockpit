@@ -1418,7 +1418,8 @@ import {
   mdiChartLine,
   mdiVideo,
   mdiTimerOutline,
-  mdiFileChart
+  mdiFileChart,
+  mdiRadar
 } from "@mdi/js";
 import Icon from "@mdi/react";
 
@@ -1475,7 +1476,7 @@ export const HeaderRealm = () => {
           {/* ROW 1 OF COLUMN 1 */}
           <div className="grid grid-cols-12 gap-4 items-start">
             {/* Flag + SHA TIN - Column 1-2 */}
-            <div className="col-span-1 flex items-center gap-3">
+            {/* <div className="col-span-1 flex items-center gap-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg"
                 alt="HK Flag"
@@ -1484,16 +1485,30 @@ export const HeaderRealm = () => {
               <span className="text-xl font-black tracking-tight whitespace-nowrap">
                 SHA TIN
               </span>
-            </div>
+            </div> */}
 
-            {/* Weather + Race Buttons - Column 3-6 */}
-            <div className="col-span-6 flex items-center gap-2 ms-6">
-              {/* Weather Icon */}
-              <div className="w-12 h-12 rounded-md bg-muted flex items-center justify-center shrink-0">
+            {/* Flag + SHA TIN - Column 1-2 */}
+            <div className="col-span-1 flex flex-col gap-1">
+              <div className="flex items-center gap-3">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg"
+                  alt="HK Flag"
+                  className="w-10 h-7 rounded-md shadow-md object-cover"
+                />
+                <span className="text-xl font-black tracking-tight whitespace-nowrap">
+                  SHA TIN
+                </span>
+              </div>
+              {/* Weather Icon moved below and left-aligned */}
+              <div className="w-12 h-12 rounded-md bg-muted flex items-center justify-center mt-4">
                 <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                 </svg>
               </div>
+            </div>
+
+            {/* Weather + Race Buttons - Column 3-6 */}
+            <div className="col-span-6 flex items-center gap-2 ms-6">
               {/* Race Buttons Grid - 2 rows of 6 */}
               <div className="grid grid-cols-12 gap-2 flex-grow">
                 {Array.from({ length: 12 }, (_, i) => (
@@ -1573,7 +1588,7 @@ export const HeaderRealm = () => {
             {/* ROW 2 CONTENT - Action Buttons + Search */}
             <div className="flex-grow">
               {/* Market Buttons (1-5) */}
-              <div className="grid grid-cols-10 gap-1.5 mb-2 mt-14">
+              <div className="grid grid-cols-10 gap-1.5 mb-2 mt-23">
                 {marketButtons.map((button, index) => (
                   <button
                     key={index}
@@ -1621,6 +1636,7 @@ export const HeaderRealm = () => {
         </div>
 
         {/* COLUMN 3 - Takes 1 column for PULSE Logo, Rowspan 2 */}
+        {/* COLUMN 3 - Takes 1 column for PULSE Logo + Radar Icon, Rowspan 2 */}
         <div className="col-span-1 row-span-2">
           <div className="flex flex-col items-center justify-start h-full">
             <div className="text-[18pt] font-black tracking-[0.18em] text-primary mb-1">
@@ -1629,12 +1645,16 @@ export const HeaderRealm = () => {
             <div className="text-[12pt] font-bold text-muted-foreground mb-3">
               {UI_VERSION}
             </div>
-            <div className="w-25 h-25 flex items-center justify-center">
+            <div className="w-25 h-25 flex items-center justify-center mb-3">
               <img
                 src="/aion_logo.png"
                 alt="Aion Logo"
                 className="w-23 h-23 object-cover"
               />
+            </div>
+            {/* New Radar Icon */}
+            <div className="flex items-center justify-center">
+              <Icon path={mdiRadar} size={1.5} className="text-primary" />
             </div>
           </div>
         </div>
