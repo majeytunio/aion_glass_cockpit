@@ -79,8 +79,8 @@ export const RunnerRealm = () => {
       {/* Total Bar */}
       <div className="mx-4 mb-4 mt-2 h-12 bg-secondary/50 border border-border/50 rounded-xl flex items-center px-4 font-bold text-muted-foreground">
         <div className="flex items-center justify-between w-full">
-          <span className="text-lg font-bold">Total: 14 Runners</span>
-          <span className="text-sm text-primary">Last Updated: Just now</span>
+          {/* <span className="text-lg font-bold">Total: 14 Runners</span> */}
+          {/* <span className="text-sm text-primary">Last Updated: Just now</span> */}
         </div>
       </div>
     </div>
