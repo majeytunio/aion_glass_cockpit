@@ -1654,7 +1654,7 @@ export const HeaderRealm = () => {
             </div>
             {/* New Radar Icon */}
             <div className="flex items-center justify-center">
-              <Icon path={mdiRadar} size={1.5} className="text-primary" />
+              <Icon path={mdiRadar} size={3} className="text-primary" />
             </div>
           </div>
         </div>
