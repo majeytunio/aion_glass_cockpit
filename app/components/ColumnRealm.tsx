@@ -1427,8 +1427,8 @@ export const ColumnRealm = () => {
     });
   };
 
-  const Cell = ({ children, align = 'center' }: { children?: React.ReactNode; align?: 'left' | 'center' | 'right' }) => (
-    <div className={`flex items-center justify-${align === 'left' ? 'start' : align === 'right' ? 'end' : 'center'} text-${align} h-full w-full px-2`}>
+  const Cell = ({ children, align = 'center', cssClasses = '' }: { children?: React.ReactNode; align?: 'left' | 'center' | 'right'; cssClasses?: string }) => (
+    <div className={`flex items-center justify-${align === 'left' ? 'start' : align === 'right' ? 'end' : 'center'} text-${align} h-full w-full px-2 ${cssClasses}`}>
       {children || <span className="text-md text-muted-foreground">
         {/* — */}
       </span>}
@@ -1495,7 +1495,9 @@ export const ColumnRealm = () => {
                 borderRight: `2px solid ${borderColor}`,
                 background: columnBgColor || (isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent')
               }}>
-              <Cell align="left">
+              <Cell align="left"
+                // cssClasses="border border-[#333]"
+              >
                 <RunnerButton 
                   number={runnerNum} 
                   onClick={() => handleRunnerClick(runnerNum)}
@@ -1509,7 +1511,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+
+              // cssClasses="border border-[#333]"
+
+              >
                 {/* RUNNER COL */}
               </Cell>
             </div>
@@ -1519,7 +1525,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* BP */}
               </Cell>
             </div>
@@ -1529,7 +1539,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* AGE */}
               </Cell>
             </div>
@@ -1539,7 +1553,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* OCR */}
               </Cell>
             </div>
@@ -1549,7 +1567,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* HWT */}
               </Cell>
             </div>
@@ -1559,7 +1581,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* DLR */}
               </Cell>
             </div>
@@ -1569,7 +1595,11 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* MTX */}
               </Cell>
             </div>
@@ -1580,7 +1610,11 @@ export const ColumnRealm = () => {
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
                 // background: '#333 !important'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* J&T */}
               </Cell>
             </div>
@@ -1591,7 +1625,11 @@ export const ColumnRealm = () => {
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}
               >
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* FIN */}
               </Cell>
             </div>
@@ -1601,20 +1639,45 @@ export const ColumnRealm = () => {
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* MRG */}
               </Cell>
             </div>
             
-            {/* Column 11: MRG */}
+            {/* Column 11: Add */}
             <div className="flex items-center justify-start h-full w-full"
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}>
-              <Cell align="left">
+              <Cell align="left"
+              
+              // cssClasses="border border-[#333]"
+              
+              >
                 {/* + */}
               </Cell>
             </div>
+            
+            
+            {activeButton === 0 && (
+              <div className="flex items-center justify-start h-full w-[1470]"
+              style={{
+                background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
+              }}
+              >
+                <Cell align="left"
+                
+                // cssClasses="border border-[#333]"
+                
+                >
+                  {/* Right-side columns */}
+                </Cell>
+              </div>
+            )}
 
             {/* DYNAMIC RIGHT SIDE DATA COLUMNS */}
             {rightColumns.map((col, idx) => (
@@ -1626,7 +1689,23 @@ export const ColumnRealm = () => {
                   background: col.bgColor || undefined
                 }}
               >
-                <div className={`h-full w-full flex items-center justify-${col.align === 'left' ? 'start' : col.align === 'right' ? 'end' : 'center'} px-2 ${col.bgColor || ''}`}>
+                <div className={`
+                    h-full w-full flex items-center px-2
+                    
+                    /* 1. Safe Alignment Logic */
+                    ${col.align === 'left' ? 'justify-start' : col.align === 'right' ? 'justify-end' : 'justify-center'} 
+                    
+                    /* 2. Simplified Background Logic */
+                    ${isEvenRow && !['TOTE W | P', 'FXD', 'BFXLPT'].includes(col.label) 
+                      ? 'bg-secondary/20' 
+                      : ''}
+                      
+                    /* 3. External Custom Color */
+                    ${col.bgColor || ''}
+                  `}>
+                    {/* ${isEvenRow && col.label !== 'TOTE W | P' ? 'bg-secondary/20' : 'transparent'}
+                    ${isEvenRow && col.label !== 'FXD' ? 'bg-secondary/20' : 'transparent'}
+                    ${isEvenRow && col.label !== 'BFXLPT' ? 'bg-secondary/20' : 'transparent'} */}
                   <span className="text-sm">
                     {/* {getMockData(col, runnerNum)} */}
                   </span>

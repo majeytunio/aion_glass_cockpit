@@ -204,32 +204,101 @@ export const ColumnHeader = () => {
       style={{ gridTemplateColumns }}
     >
       {/* Your EXISTING 12 columns - NO CHANGES */}
-      <Cell align="center">
+      <Cell align="center" 
+        
+        cssClasses="border border-transparent"
+        
+        >
+        
         # <Icon path={mdiTriangleDown} size={0.5} className="text-muted-foreground" />
       </Cell>
-      <Cell align="center">
+      <Cell align="center" 
+        
+        cssClasses="border border-transparent"
+        
+        >
         <div className="flex items-center justify-center"></div>
       </Cell>
-      <Cell align="center">
+      <Cell align="center" 
+        
+        cssClasses="border border-transparent"
+        
+        >
         <div className="flex items-center justify-center">
           <span className="font-bold">(BP)</span>
         </div>
       </Cell>
-      <Cell align="center">AGE</Cell>
-      <Cell align="center">OCR</Cell>
-      <Cell align="center">HWT</Cell>
-      <Cell align="center">DLR</Cell>
-      <Cell align="center">MTX</Cell>
-      <Cell align="left" cssClasses="justify-start">
-        <div className="flex items-start justify-start gap-1">J&T</div>
+      <Cell 
+        align="center" 
+        
+        cssClasses="border border-transparent"
+        
+        >
+          AGE
       </Cell>
-      <Cell align="center">FINTIME</Cell>
-      <Cell align="center">MRG</Cell>
-      <Cell align="center">+</Cell>
+      <Cell align="center" 
+      
+        cssClasses="border border-transparent"
+        
+        >
+          OCR
+      </Cell>
+      
+      <Cell align="center" 
+      
+        cssClasses="border border-transparent"
+        
+        >
+          HWT
+      </Cell>
+      <Cell align="center" 
+      
+      cssClasses="border border-transparent"
+      
+      >DLR</Cell>
+      <Cell align="center" 
+      
+      cssClasses="border border-transparent"
+      
+      >MTX</Cell>
+      <Cell align="center" 
+      
+        cssClasses="border border-transparent"
+        
+        >
+        <div className="flex items-center justify-center gap-1">
+          J&T
+        </div>
+      </Cell>
+      <Cell align="center" 
+        
+        cssClasses="border border-transparent"
+        
+        >
+          FINTIME
+      </Cell>
+      <Cell align="center" 
+      
+        cssClasses="border border-transparent"
+        
+        >
+          MRG
+      </Cell>
+
+      <Cell align="center" 
+        cssClasses="border border-transparent"
+        
+        >
+          +
+      </Cell>
       
       {/* DYNAMIC RIGHT SIDE COLUMNS - NO BACKGROUND COLORS HERE */}
       {rightColumns.map((col, idx) => (
-        <Cell key={`header-${idx}`} align={col.align || 'center'}>
+        <Cell key={`header-${idx}`} align={col.align || 'center'}
+          
+        cssClasses="border border-transparent justify-center items-center"
+        
+        >
           <span className="font-bold text-[12pt] whitespace-nowrap">{col.label}</span>
         </Cell>
       ))}

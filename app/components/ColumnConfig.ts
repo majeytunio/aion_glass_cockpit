@@ -123,7 +123,7 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'TOTE W | P', 
             width: '90px', 
-            bgColor: 'bg-gray-100 dark:bg-gray-800/50', 
+            bgColor: 'bg-gray-100 dark:bg-gray-100', 
             align: 'right' 
         },
 
@@ -145,13 +145,14 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'FXD', 
             width: '70px', 
-            bgColor: 'bg-blue-50 dark:bg-blue-900/20', 
+            bgColor: 'bg-[#DAE9F8] dark:bg-[#DAE9F8]', 
             align: 'right' 
         },
         { 
             label: 'BFXLPT', 
             width: '80px', 
-            bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            // bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            bgColor: 'bg-[#F5FFC1] dark:bg-[#F5FFC1]', 
             align: 'right' 
         },
         { 
@@ -183,7 +184,7 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'TOTE W | P', 
             width: '90px', 
-            bgColor: 'bg-gray-100 dark:bg-gray-800/50', 
+            bgColor: 'bg-gray-100 dark:bg-gray-100', 
             align: 'right' 
         },
 
@@ -205,13 +206,14 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'FXD', 
             width: '70px', 
-            bgColor: 'bg-blue-50 dark:bg-blue-900/20', 
+            bgColor: 'bg-[#DAE9F8] dark:bg-[#DAE9F8]', 
             align: 'right' 
         },
         { 
             label: 'BFXLPT', 
             width: '80px', 
-            bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            // bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            bgColor: 'bg-[#F5FFC1] dark:bg-[#F5FFC1]', 
             align: 'right' 
         },
         { 
@@ -246,7 +248,7 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'TOTE W | P', 
             width: '90px', 
-            bgColor: 'bg-gray-100 dark:bg-gray-800/50', 
+            bgColor: 'bg-gray-100 dark:bg-gray-100', 
             align: 'right' 
         },
 
@@ -268,13 +270,14 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         { 
             label: 'FXD', 
             width: '70px', 
-            bgColor: 'bg-blue-50 dark:bg-blue-900/20', 
+            bgColor: 'bg-[#DAE9F8] dark:bg-[#DAE9F8]', 
             align: 'right' 
         },
         { 
             label: 'BFXLPT', 
             width: '80px', 
-            bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            // bgColor: 'bg-green-50 dark:bg-green-900/20', 
+            bgColor: 'bg-[#F5FFC1] dark:bg-[#F5FFC1]', 
             align: 'right' 
         },
         { 
@@ -300,9 +303,35 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
         // { label: 'Column 3-1', width: '80px', align: 'right' },
         // { label: 'Column 3-2', width: '90px', align: 'right' },
         // { label: 'Column 3-3', width: '80px', align: 'right' }
-      ];
+    ];
     case 4:
+        return [
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+        ];
     case 5:
+        return [
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+            { label: '', width: '80px', align: 'right' },
+        ];
     default:
       return [];
   }
@@ -313,8 +342,11 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
 // export const BASE_REALM_COLUMNS = '60px 300px 85px 70px 70px 70px 75px 70px 70px 120px 70px 70px';
 
 
-export const BASE_HEADER_LEFT_COLUMNS = '60px 400px 60px 60px 60px 60px 60px 60px 360px 100px 60px 60px';
-export const BASE_REALM_LEFT_COLUMNS = '60px 430px 70px 65px 75px 75px 63px 72px 385px 100px 85px 40px';
+export const BASE_HEADER_LEFT_COLUMNS = '60px 300px 80px 80px 80px 80px 100px 100px 245px 120px 60px 60px';
+export const BASE_REALM_LEFT_COLUMNS = '60px 315px 90px 90px 90px 90px 115px 110px 265px 130px 75px 65px';
 
-export const BASE_HEADER_RIGHT_COLUMNS = '100px 125px 100px 100px 100px 100px 100px 100px 110px 100px 100px 100px';
-export const BASE_REALM_RIGHT_COLUMNS = '125px 130px 110px 115px 110px 110px 130px 100px 120px 110px 100px 100px';
+// export const BASE_HEADER_RIGHT_COLUMNS = '100px 125px 100px 100px 100px 100px 100px 100px 110px 100px 100px 100px';
+// export const BASE_REALM_RIGHT_COLUMNS = '125px 130px 110px 115px 110px 110px 130px 100px 120px 110px 100px 100px';
+
+export const BASE_HEADER_RIGHT_COLUMNS = '140px 120px 120px 120px 120px 130px 120px 100px 100px 150px 150px';
+export const BASE_REALM_RIGHT_COLUMNS = '155px 135px 130px 130px 135px 135px 135px 105px 115px 160px 160px';

@@ -20,7 +20,7 @@ export const ColumnFooter = () => {
 
   return (
     <div 
-      className="column-header grid gap-3 py-2 px-0 text-[12pt]"
+      className="column-header grid gap-3 py-4 px-0 text-[12pt] bg-secondary"
       style={{ gridTemplateColumns }}
     >
       {/* Your EXISTING 12 columns - NO CHANGES */}
@@ -67,7 +67,7 @@ export const ColumnFooter = () => {
       
       {/* DYNAMIC RIGHT SIDE COLUMNS - NO BACKGROUND COLORS HERE */}
       {rightColumns.map((col, idx) => (
-        <Cell key={`header-${idx}`} align={'right'} cssClasses="align-end items-right justify-end">
+        <Cell key={`header-${idx}`} align={'right'} cssClasses="align-end items-center justify-center">
           <span className="font-bold text-[12pt] whitespace-nowrap">
             {/* {col.label} */}
             
@@ -79,6 +79,9 @@ export const ColumnFooter = () => {
             {col.label === 'BFXLPT' ? '0%' : ''}
             {col.label === 'A_m_THEO' ? '0%' : ''}
             {col.label === 'A_e_THEO' ? '0%' : ''}
+
+            
+
           </span>
         </Cell>
       ))}
