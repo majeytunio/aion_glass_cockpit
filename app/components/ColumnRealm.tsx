@@ -1696,9 +1696,40 @@ export const ColumnRealm = () => {
                     ${col.align === 'left' ? 'justify-start' : col.align === 'right' ? 'justify-end' : 'justify-center'} 
                     
                     /* 2. Simplified Background Logic */
-                    ${isEvenRow && !['TOTE W | P', 'FXD', 'BFXLPT'].includes(col.label) 
+                    /*
+                    ${isEvenRow && ![
+                      'TOTE W | P', 
+                      'A_Theo', 
+                      'cAlpha', 
+                      'FXD', 
+                      'SBT', 
+                      'BFXLPT',
+                      'B3', 'B2', 'B1',
+                      'L3', 'L2', 'L1',
+                      'LPT', 'WAP'
+                    ].includes(col.label) 
                       ? 'bg-secondary/20' 
                       : ''}
+
+
+                    
+                      /* 2. Simplified Background Logic */
+                      ${isEvenRow && ![
+                        'col_1_2',  // TOTE W | P
+                        'col_2_2',  // A_Theo (case 2)
+                        'col_3_2',  // A_Theo (case 3)
+                        'col_2_3',  // cAlpha (case 2)
+                        'col_3_3',  // cAlpha (case 3)
+                        'col_1_6',  // FXD (case 1)
+                        'col_2_4',  // SBT (case 2)
+                        'col_2_5', 'col_2_6', 'col_2_7', 'col_2_8', 'col_2_9', 'col_2_10', 'col_2_11',  // FXD columns (case 2)
+                        'col_3_4', 'col_3_5', 'col_3_6',  // B3, B2, B1 (case 3)
+                        'col_3_7', 'col_3_8',  // LPT, WAP (case 3)
+                        'col_3_9', 'col_3_10', 'col_3_11',  // L1, L2, L3 (case 3)
+                        'col_1_7'   // BFXLPT (case 1)
+                      ].includes(col.column_id) 
+                        ? 'bg-secondary/20' 
+                        : ''}
                       
                     /* 3. External Custom Color */
                     ${col.bgColor || ''}
