@@ -1697,21 +1697,6 @@ export const ColumnRealm = () => {
                     
                     /* 2. Simplified Background Logic */
                     /*
-                    ${isEvenRow && ![
-                      'TOTE W | P', 
-                      'A_Theo', 
-                      'cAlpha', 
-                      'FXD', 
-                      'SBT', 
-                      'BFXLPT',
-                      'B3', 'B2', 'B1',
-                      'L3', 'L2', 'L1',
-                      'LPT', 'WAP'
-                    ].includes(col.label) 
-                      ? 'bg-secondary/20' 
-                      : ''}
-
-
                     
                       /* 2. Simplified Background Logic */
                       ${isEvenRow && ![
@@ -1727,7 +1712,7 @@ export const ColumnRealm = () => {
                         'col_3_7', 'col_3_8',  // LPT, WAP (case 3)
                         'col_3_9', 'col_3_10', 'col_3_11',  // L1, L2, L3 (case 3)
                         'col_1_7'   // BFXLPT (case 1)
-                      ].includes(col.column_id) 
+                      ].includes(col.column_id ?? '') 
                         ? 'bg-secondary/20' 
                         : ''}
                       

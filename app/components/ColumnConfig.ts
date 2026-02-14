@@ -110,7 +110,7 @@ export interface RightColumn {
   label: string;
   width: string;
   bgColor?: string;
-  column_id?: string; // Optional unique identifier for the column
+  column_id?: string;
   align?: 'left' | 'center' | 'right';
 }
 
