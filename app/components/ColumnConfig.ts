@@ -587,11 +587,14 @@ export const getRightSideColumns = (activeButton: number): RightColumn[] => {
 // export const BASE_REALM_COLUMNS = '60px 300px 85px 70px 70px 70px 75px 70px 70px 120px 70px 70px';
 
 
-export const BASE_HEADER_LEFT_COLUMNS = '60px 300px 80px 80px 80px 80px 100px 100px 245px 120px 60px 60px';
-export const BASE_REALM_LEFT_COLUMNS = '60px 315px 90px 90px 90px 90px 115px 110px 265px 130px 75px 65px';
+// export const BASE_HEADER_LEFT_COLUMNS = '60px 300px 80px 80px 80px 80px 100px 100px 245px 120px 60px 60px';
+// export const BASE_REALM_LEFT_COLUMNS = '60px 315px 90px 90px 90px 90px 115px 110px 265px 130px 75px 65px';
+
+export const BASE_HEADER_LEFT_COLUMNS = '60px 360px 80px 80px 80px 80px 100px 100px 300px 120px 60px 60px';
+export const BASE_REALM_LEFT_COLUMNS = '60px 375px 90px 90px 90px 90px 115px 110px 320px 130px 75px 65px';
 
 // export const BASE_HEADER_RIGHT_COLUMNS = '100px 125px 100px 100px 100px 100px 100px 100px 110px 100px 100px 100px';
 // export const BASE_REALM_RIGHT_COLUMNS = '125px 130px 110px 115px 110px 110px 130px 100px 120px 110px 100px 100px';
 
-export const BASE_HEADER_RIGHT_COLUMNS = '140px 120px 120px 120px 120px 130px 120px 100px 100px 150px 150px';
-export const BASE_REALM_RIGHT_COLUMNS = '155px 135px 130px 130px 135px 135px 135px 105px 115px 160px 160px';
+export const BASE_HEADER_RIGHT_COLUMNS = '140px 120px 120px 120px 120px 130px 120px 100px 100px 150px 190px';
+export const BASE_REALM_RIGHT_COLUMNS = '155px 135px 130px 130px 135px 135px 135px 105px 115px 160px 200px';

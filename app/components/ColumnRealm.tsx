@@ -1664,7 +1664,7 @@ export const ColumnRealm = () => {
             
             
             {activeButton === 0 && (
-              <div className="flex items-center justify-start h-full w-[1470]"
+              <div className="flex items-center justify-start h-full w-[1530]"
               style={{
                 background: isEvenRow ? 'rgba(0, 0, 0, 0.02)' : 'transparent'
               }}
@@ -1693,7 +1693,7 @@ export const ColumnRealm = () => {
                     h-full w-full flex items-center px-2
                     
                     /* 1. Safe Alignment Logic */
-                    ${col.align === 'left' ? 'justify-start' : col.align === 'right' ? 'justify-end' : 'justify-center'} 
+                    ${col.align === 'left' ? 'justify-start' : col.align === 'center' ? 'justify-end' : 'justify-center'} 
                     
                     /* 2. Simplified Background Logic */
                     /*
