@@ -42,12 +42,12 @@ export default function Jockey({ params }: PageProps) {
     <ButtonProvider>
       <div className="min-h-screen bg-background pb-12">
         {/* Now TypeScript is happy because jockeyProfileData is guaranteed to be NOT null here */}
-        <JockeyProfileHeader jockeyData={jockeyProfileData} />
+        {/* <JockeyProfileHeader jockeyData={jockeyProfileData} /> */}
         
         {/* You can pass the data into RunnerRealm too */}
         {/* <RunnerRealm data={runnerRowData} /> */}
         
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </ButtonProvider>
   );
