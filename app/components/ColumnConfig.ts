@@ -114,6 +114,37 @@ export interface RightColumn {
   align?: 'left' | 'center' | 'right';
 }
 
+
+export interface RunnerRowData {
+  id: number;
+  number: number;
+  runnerCol: string;
+  bp: string;
+  age: string;
+  ocr: string;
+  hwt: string;
+  dlr: string;
+  mtx: string;
+  jandt: string;
+  fin: string;
+  mrg: string;
+  add: string;
+  // Right side dynamic data - can be any structure based on your needs
+  rightSideData?: {
+    [key: string]: string | number;
+  };
+}
+
+export interface ColumnConfig {
+  id: string;
+  label: string;
+  width: string;
+  align?: 'left' | 'center' | 'right';
+  bgColor?: string;
+  dataKey?: string; // Key to access data from runner object
+}
+
+
 export const getRightSideColumns = (activeButton: number): RightColumn[] => {
 //   switch(activeButton) {
 //     case 1:

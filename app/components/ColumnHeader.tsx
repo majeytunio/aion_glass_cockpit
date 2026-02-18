@@ -261,12 +261,12 @@ export const ColumnHeader = () => {
       cssClasses="border border-transparent"
       
       >MTX</Cell>
-      <Cell align="center" 
+      <Cell align="left" 
       
         cssClasses="border border-transparent"
         
         >
-        <div className="flex items-center justify-center gap-1">
+        <div className="flex items-start justify-start gap-1">
           J&T
         </div>
       </Cell>
