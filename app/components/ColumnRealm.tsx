@@ -1896,7 +1896,14 @@ export const ColumnRealm = () => {
                     >
                       <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
                       {/* <span className="text-sm">{runnerData[index]?.name.toUpperCase() || `Runner ${index}`}</span> */}
-                      <span className="text-sm">{`RUNNER NAME`}</span>
+                      <span className="
+                      text-md font-semibold cursor-pointer hover:underline
+                      "
+                      
+                      >
+                        {/* {`RUNNER NAME`} */}
+                        {runnerData[index]?.name ? ` ${runnerData[index].name}` : ''}
+                      </span>
                     </div>
                   </>
                 )}
@@ -2050,8 +2057,17 @@ export const ColumnRealm = () => {
                   {/* <span className="text-sm">{runnerData[index]?.jandt || '—'}</span> */}
 
                   <div className='flex flex-col w-full'>
-                    <span className="text-sm font-semibold">{runnerData[index]?.jockey || '—'}</span>
-                    <span className="text-xs text-muted-foreground/60 italic">{runnerData[index]?.trainer || '—'}</span>
+                    <span className="text-sm font-semibold cursor-pointer hover:underline"
+                    onClick={() => window.location.href = '/jockey/' + (runnerData[index]?.id || '')}
+                    >
+                      {runnerData[index]?.jockey || '—'}
+                    </span>
+                    
+                    <span className="text-xs text-muted-foreground/60 italic cursor-pointer hover:underline"
+                    onClick={() => window.location.href = '/trainers/' + (runnerData[index]?.id || '')}
+                    >
+                      {runnerData[index]?.trainer || '—'}
+                    </span>
                   </div>
                   </>
                 )}
@@ -2145,6 +2161,10 @@ export const ColumnRealm = () => {
                 }}
               >
                 <div className={`
+
+                    border-b border-white/80
+                    border-r border-white/80
+
                     h-full w-full flex items-center px-2
                     
                     /* 1. Safe Alignment Logic */

@@ -627,5 +627,16 @@ export const BASE_REALM_LEFT_COLUMNS = '60px 375px 90px 90px 90px 90px 115px 110
 // export const BASE_HEADER_RIGHT_COLUMNS = '100px 125px 100px 100px 100px 100px 100px 100px 110px 100px 100px 100px';
 // export const BASE_REALM_RIGHT_COLUMNS = '125px 130px 110px 115px 110px 110px 130px 100px 120px 110px 100px 100px';
 
-export const BASE_HEADER_RIGHT_COLUMNS = '140px 120px 120px 120px 120px 130px 120px 100px 100px 150px 190px';
-export const BASE_REALM_RIGHT_COLUMNS = '155px 135px 130px 130px 135px 135px 135px 105px 115px 160px 200px';
+// export const BASE_HEADER_RIGHT_COLUMNS = '140px 120px 120px 120px 120px 130px 120px 100px 100px 150px 190px';
+// export const BASE_REALM_RIGHT_COLUMNS = '155px 135px 130px 130px 135px 135px 135px 105px 115px 160px 200px';
+
+// export const BASE_HEADER_RIGHT_COLUMNS = '154px 120px 120px 120px 120px 130px 120px 100px 100px 150px 190px';
+// export const BASE_REALM_RIGHT_COLUMNS = '169px 135px 130px 130px 135px 135px 135px 105px 115px 160px 200px';
+
+
+
+
+
+
+export const BASE_HEADER_RIGHT_COLUMNS = '125px 130px 130px 125px 127px 127px 127px 130px 127px 127px 140px';
+export const BASE_REALM_RIGHT_COLUMNS = '140px 140px 140px 140px 140px 140px 140px 140px 140px 140px 148px';

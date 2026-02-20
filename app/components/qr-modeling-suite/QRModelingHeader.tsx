@@ -38,35 +38,7 @@ const upcomingRaces = [
   { trackCode: 'SHATI', raceNo: 6, ttm: '176m', countryCode: 'HK' },
 ];
 
-export const RunnerHeader = ({ runnerData }: { runnerData: RunnerRowData }) => {
-  const { activeButton, setActiveButton } = useButtonContext();
-
-  // Market Buttons (1-5) - NOW CLICKABLE
-  const marketButtons = [
-    { id: 1, title: "Tote Pool Market", icon: mdiCashMultiple },
-    { id: 2, title: "Fixed Odds Markets", icon: mdiTicketPercent },
-    { id: 3, title: "Betfair Exchange Market", icon: mdiSwapHorizontal },
-    { id: 4, title: "Asian Exchange Market", icon: mdiSwapHorizontalVariant },
-    { id: 5, title: "Multi Race / Jackpot Market", icon: mdiSlotMachine }
-  ];
-
-  // Search Filter Buttons (6-10)
-  const searchButtons = [
-    { title: "Thoroughbred (Search)", icon: mdiHorseVariantFast },
-    { title: "Harness (Search)", icon: mdiHorseshoe },
-    { title: "Greyhound (Search)", icon: mdiDogSide },
-    { title: "Kyotei (Search)", icon: mdiMotorbike },
-    { title: "Keirin (Search)", icon: mdiBicycle }
-  ];
-
-  // Status Buttons (11-15)
-  const statusButtons = [
-    { title: "Pre-Race Features", icon: mdiFlash },
-    { title: "Post Race Performance Measurement", icon: mdiChartLine },
-    { title: "VDL (Video Data Labelling)", icon: mdiVideo },
-    { title: "Sectional Times (Search)", icon: mdiTimerOutline },
-    { title: "Meeting Analysis", icon: mdiFileChart }
-  ];
+export const QRModelingHeader = () => {
 
   return (
     <div className="cockpit-card p-5 mx-4 mt-4 relative">
@@ -99,7 +71,7 @@ export const RunnerHeader = ({ runnerData }: { runnerData: RunnerRowData }) => {
                         />
                         <span className="text-[20pt] font-black tracking-tight whitespace-nowrap">
                             {/* SHA TIN {runnerData?.name || ''} */}
-                            {runnerData?.name || ''}
+                            QR Modeling Suite
                         </span>
                     </div>
                 </div>
@@ -196,7 +168,7 @@ export const RunnerHeader = ({ runnerData }: { runnerData: RunnerRowData }) => {
             <div className="flex items-end justify-end mb-10 hover:bg-secondary/50 rounded-lg p-1 cursor-pointer" 
             onClick={() => window.location.href = '/'}
             >
-              <Icon path={mdiArrowLeft} size={2} className="text-primary" />
+                <Icon path={mdiArrowLeft} size={2} className="text-primary" />
             </div>
           </div>
           <div className="flex flex-col items-end justify-end h-full">

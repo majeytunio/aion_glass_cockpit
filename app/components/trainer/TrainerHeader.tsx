@@ -193,10 +193,10 @@ export const TrainerProfileHeader = ({ trainerData }: { trainerData: RunnerRowDa
         {/* COLUMN 3 - Takes 1 column for PULSE Logo, Rowspan 2 */}
         <div className="col-span-1 row-span-2">
           <div className="flex flex-col items-end justify-end h-full">
-            <div className="flex items-end justify-end me-3 mb-10 hover:bg-secondary/50 rounded-lg p-1 cursor-pointer" 
+            <div className="flex items-end justify-end mb-10 hover:bg-secondary/50 rounded-lg p-1 cursor-pointer" 
             onClick={() => window.location.href = '/'}
             >
-              <Icon path={mdiArrowLeft} size={3} className="text-primary" />
+                <Icon path={mdiArrowLeft} size={2} className="text-primary" />
             </div>
           </div>
           <div className="flex flex-col items-end justify-end h-full">
