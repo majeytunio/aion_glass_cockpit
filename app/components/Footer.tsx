@@ -152,7 +152,9 @@ import {
   mdiCheckDecagram, 
   mdiFinance,
   mdiTowerFire, // For Control Tower
-  mdiQrcode // For QR Modelling Suite
+  mdiQrcode, // For QR Modelling Suite
+  mdiMonitorDashboard,
+  mdiTransmissionTower
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import { usePathname, useRouter } from "next/dist/client/components/navigation";
@@ -219,33 +221,33 @@ export const Footer = () => {
     >
       {/* Left Side Button A - Control Tower */}
       <button 
-        // className="
-        // footer-btn 
-        // flex-shrink-0 
-        // flex items-center justify-center px-6 
-        // hover:bg-primary hover:text-white 
-        // rounded-lg transition-colors
-
-        
-
-        // "
         className={`
+          group /* 1. Tracks hover state */
           footer-btn 
           flex-shrink-0 
           flex items-center justify-center px-6 
-          hover:bg-primary hover:text-white 
-          rounded-lg transition-colors
+          rounded-lg
           ${isControlTower 
             ? 'bg-primary text-white' 
-            : 'hover:bg-primary hover:text-white'
+            : 'bg-secondary hover:bg-primary' /* Added bg-secondary for default state */
           }
         `}
-
         title="Control Tower"
-        style={{ height: '65px', width: '60px' }} // ~50% increase from default
-        onClick={() => window.location.href = '/control-tower'} // Navigate to Control Tower page
+        style={{ height: '65px', width: '60px' }}
+        onClick={() => window.location.href = '/control-tower'}
       >
-        <Icon path={mdiTowerFire} size={2.25} />
+        <img
+          src="/control_tower_icon.png"
+          alt="Control Tower"
+          className={`
+            w-13 h-13
+            /* 2. Logic: If active OR if parent button is hovered, turn white */
+            ${isControlTower 
+                ? 'brightness-0 invert' 
+                : 'group-hover:brightness-0 group-hover:invert'
+            }
+          `}
+        />
       </button>
       
       {/* Center 9 Buttons - fill remaining space evenly */}
@@ -268,25 +270,30 @@ export const Footer = () => {
       
       {/* Right Side Button Z - QR Modelling Suite */}
       <button 
-
         className={`
+          group /* 1. Tracks hover state for the whole button */
           footer-btn 
           flex-shrink-0 
           flex items-center justify-center px-6 
-          hover:bg-primary hover:text-white 
-          rounded-lg transition-colors
-          ${isQRModelingSuite 
-            ? 'bg-primary text-white' 
-            : 'hover:bg-primary hover:text-white'
-          }
+          hover:bg-primary rounded-lg
+          ${isQRModelingSuite ? 'bg-primary' : 'bg-secondary'}
         `}
-
         title="QR Modelling Suite"
-        style={{ height: '65px', width: '60px' }} // ~50% increase from default
-        onClick={() => window.location.href = '/qr-modeling-suite'} // Navigate to QR Modelling Suite page
-
+        style={{ height: '65px', width: '60px' }}
+        onClick={() => window.location.href = '/qr-modeling-suite'}
       >
-        <Icon path={mdiQrcode} size={2.25} />
+        <img
+          src="/qr_modeling_suite_icon.png"
+          alt="QR Modelling Suite"
+          className={`
+            w-13 h-13
+            /* 2. Logic: If active OR if parent button is hovered, turn white */
+            ${isQRModelingSuite 
+                ? 'brightness-0 invert' 
+                : 'group-hover:brightness-0 group-hover:invert'
+            }
+          `}
+        />
       </button>
     </div>
   );

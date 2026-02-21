@@ -93,9 +93,9 @@ export const JockeyProfileHeader = ({ jockeyData }: { jockeyData: RunnerRowData 
                 <div className="col-span-1 flex flex-col gap-1 ms-5">
                     <div className="flex items-center gap-3">
                         <img
-                            src="/runner_placeholder.jpeg"
-                            alt="HK Flag"
-                            className="w-20 h-20 rounded-[100%] shadow-md object-cover"
+                            src="/jockey_icon.png"
+                            alt="Jockey"
+                            className="w-20 h-20"
                         />
                         <span className="text-[20pt] font-black tracking-tight whitespace-nowrap">
                             {/* SHA TIN {runnerData?.name || ''} */}

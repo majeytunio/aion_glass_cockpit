@@ -1739,20 +1739,20 @@ export const HeaderRealm = () => {
 
   // Search Filter Buttons (6-10)
   const searchButtons = [
-    { title: "Thoroughbred (Search)", icon: mdiHorseVariantFast },
-    { title: "Harness (Search)", icon: mdiHorseshoe },
-    { title: "Greyhound (Search)", icon: mdiDogSide },
-    { title: "Kyotei (Search)", icon: mdiMotorbike },
-    { title: "Keirin (Search)", icon: mdiBicycle }
+    { id: 6, title: "Thoroughbred (Search)", icon: mdiHorseVariantFast },
+    { id: 7, title: "Harness (Search)", icon: mdiHorseshoe },
+    { id: 8, title: "Greyhound (Search)", icon: mdiDogSide },
+    { id: 9, title: "Kyotei (Search)", icon: mdiMotorbike },
+    { id: 10, title: "Keirin (Search)", icon: mdiBicycle }
   ];
 
   // Status Buttons (11-15)
   const statusButtons = [
-    { title: "Pre-Race Features", icon: mdiFlash },
-    { title: "Post Race Performance Measurement", icon: mdiChartLine },
-    { title: "VDL (Video Data Labelling)", icon: mdiVideo },
-    { title: "Sectional Times (Search)", icon: mdiTimerOutline },
-    { title: "Meeting Analysis", icon: mdiFileChart }
+    { id: 11, title: "Pre-Race Features", icon: mdiFlash },
+    { id: 12, title: "Post Race Performance Measurement", icon: mdiChartLine },
+    { id: 13, title: "VDL (Video Data Labelling)", icon: mdiVideo },
+    { id: 14, title: "Sectional Times (Search)", icon: mdiTimerOutline },
+    { id: 15, title: "Meeting Analysis", icon: mdiFileChart }
   ];
 
   return (
@@ -1882,7 +1882,22 @@ export const HeaderRealm = () => {
                     className="h-8 rounded-lg bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
                     title={button.title}
                   >
-                    <Icon path={button.icon} size={1} />
+
+                    {button.id === 6 ? (
+                      <img src="/button_6.png" alt="Thoroughbred (Search)" className="h-8 w-8 object-contain" />
+                    ) : button.id === 7 ? (
+                      <img src="/button_7.png" alt="Harnes (Search)" className="h-8 w-8 object-contain" />
+                    ) : button.id === 8 ? (
+                      <img src="/button_8.png" alt="Greyhound (Search)" className="h-8 w-8 object-contain" />
+                    ) : (
+                      /* The final 'Else' - Default for all other IDs */
+                      <Icon path={button.icon} size={1} />
+                    )}
+
+
+
+
+                    {/* <Icon path={button.icon} size={1} /> */}
                   </button>
                 ))}
               </div>

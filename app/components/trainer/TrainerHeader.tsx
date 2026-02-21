@@ -93,9 +93,9 @@ export const TrainerProfileHeader = ({ trainerData }: { trainerData: RunnerRowDa
                 <div className="col-span-1 flex flex-col gap-1 ms-5">
                     <div className="flex items-center gap-3">
                         <img
-                            src="/runner_placeholder.jpeg"
-                            alt="HK Flag"
-                            className="w-20 h-20 rounded-[100%] shadow-md object-cover"
+                            src="/trainer_icon.png"
+                            alt="Trainer"
+                            className="w-20 h-20"
                         />
                         <span className="text-[20pt] font-black tracking-tight whitespace-nowrap">
                             {/* SHA TIN {runnerData?.name || ''} */}

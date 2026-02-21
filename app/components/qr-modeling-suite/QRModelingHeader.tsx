@@ -22,7 +22,8 @@ import {
   mdiFileChart,
   mdiRadar,
   mdiExitToApp,
-  mdiArrowLeft
+  mdiArrowLeft,
+  mdiMonitorDashboard
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import { RunnerRowData } from '../RunnerRowInterface';
@@ -65,10 +66,11 @@ export const QRModelingHeader = () => {
                 <div className="col-span-1 flex flex-col gap-1 ms-5">
                     <div className="flex items-center gap-3">
                         <img
-                            src="/runner_placeholder.jpeg"
-                            alt="HK Flag"
-                            className="w-20 h-20 rounded-[100%] shadow-md object-cover"
+                            src="/qr_modeling_suite_icon.png"
+                            alt="QR Modeling Suite"
+                            className="w-20 h-20"
                         />
+                        {/* <Icon path={mdiMonitorDashboard} size={3} /> */}
                         <span className="text-[20pt] font-black tracking-tight whitespace-nowrap">
                             {/* SHA TIN {runnerData?.name || ''} */}
                             QR Modeling Suite
