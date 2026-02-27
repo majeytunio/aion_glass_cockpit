@@ -2978,7 +2978,8 @@ export const HeaderRealm = () => {
               <div className="text-xs text-muted-foreground mt-1 min-h-[40px]">
                 {/* Always present - shows race count */}
                 <div>
-                  Showing {filteredRaces.length} races on {selectedDate}
+                  &nbsp;
+                  {/* Showing {filteredRaces.length} races on {selectedDate} */}
                 </div>
                 
                 {/* Filter badges container - always in DOM but visibility toggled */}

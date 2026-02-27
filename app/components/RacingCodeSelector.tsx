@@ -3,12 +3,21 @@
 import { useState } from "react";
 
 // Racing codes with their display names and icons
+// export const RACING_CODES = [
+//   { code: 'TH', name: 'Thoroughbred', icon: '🐎' },
+//   { code: 'HN', name: 'Harness', icon: '🏇' },
+//   { code: 'GR', name: 'Greyhound', icon: '🐕' },
+//   { code: 'KY', name: 'Kyotei', icon: '🛥️' },
+//   { code: 'KE', name: 'Keirin', icon: '🚲' },
+// ];
+
+
 export const RACING_CODES = [
-  { code: 'TH', name: 'Thoroughbred', icon: '🐎' },
-  { code: 'HN', name: 'Harness', icon: '🏇' },
-  { code: 'GR', name: 'Greyhound', icon: '🐕' },
-  { code: 'KY', name: 'Kyotei', icon: '🛥️' },
-  { code: 'KE', name: 'Keirin', icon: '🚲' },
+  { code: 'TH', name: 'Thoroughbred', icon: '/button_6.png' },
+  { code: 'HN', name: 'Harness', icon: '/button_7.png' },
+  { code: 'GR', name: 'Greyhound', icon: '/button_8.png' },
+  { code: 'KY', name: 'Kyotei', icon: '/Kyotei_Icon_96x96.png' },
+  { code: 'KE', name: 'Keirin', icon: '/Keirin_Icon_96x96.png' },
 ];
 
 interface RacingCodeSelectorProps {
@@ -91,35 +100,42 @@ export const RacingCodeSelector = ({ selectedCodes, onChange }: RacingCodeSelect
           {/* Racing Code Grid */}
           <div className="grid grid-cols-1 gap-2">
             {RACING_CODES.map((racingCode) => {
-              const isSelected = selectedCodes.includes(racingCode.code);
-              
-              return (
-                <button
-                  key={racingCode.code}
-                  onClick={() => toggleCode(racingCode.code)}
-                  className={`
-                    flex items-center gap-3 px-3 py-2 rounded-lg transition-all
-                    ${isSelected 
-                      ? 'bg-green-500 text-white' 
-                      : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    }
-                  `}
-                >
-                  {/* Icon */}
-                  <span className="text-xl">{racingCode.icon}</span>
-                  
-                  {/* Code and Name */}
-                  <div className="flex flex-col items-start">
-                    <span className="text-sm font-bold">{racingCode.code}</span>
-                    <span className="text-[10px] opacity-75">{racingCode.name}</span>
-                  </div>
+                const isSelected = selectedCodes.includes(racingCode.code);
+                
+                return (
+                    <button
+                    key={racingCode.code}
+                    onClick={() => toggleCode(racingCode.code)}
+                    className={`
+                        flex items-center gap-3 px-3 py-2 rounded-lg transition-all group
+                        ${isSelected 
+                        ? 'bg-green-500 text-white' 
+                        : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
+                        }
+                    `}
+                    >
+                    {/* PNG Icon with Dynamic Color Logic */}
+                    <img 
+                        src={racingCode.icon} 
+                        alt={racingCode.name}
+                        className={`w-6 h-6 object-contain transition-all
+                        ${isSelected ? 'brightness-0 invert' : ''} 
+                        /* This makes the icon turn white when the row is green */
+                        `}
+                    />
+                    
+                    {/* Code and Name */}
+                    <div className="flex flex-col items-start text-left">
+                        <span className="text-sm font-bold">{racingCode.code}</span>
+                        <span className="text-[10px] opacity-75">{racingCode.name}</span>
+                    </div>
 
-                  {/* Checkmark for selected */}
-                  {isSelected && (
-                    <span className="ml-auto text-white text-lg">✓</span>
-                  )}
-                </button>
-              );
+                    {/* Checkmark for selected */}
+                    {isSelected && (
+                        <span className="ml-auto text-white text-lg">✓</span>
+                    )}
+                    </button>
+                );
             })}
           </div>
         </div>

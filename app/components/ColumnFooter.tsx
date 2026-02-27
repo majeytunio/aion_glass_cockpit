@@ -275,50 +275,52 @@ export const ColumnFooter = () => {
             {col.column_id === 'col_3_10' ? '0%' : ''} {/* L2 */}
             {col.column_id === 'col_3_11' ? '0%' : ''} {/* L3 */}
 
+
+
             {/* Button 11 columns */}
-            {col.column_id === 'col_11_1' ? 'STAT' : ''}
-            {col.column_id === 'col_11_2' ? 'STAT' : ''}
-            {col.column_id === 'col_11_3' ? 'STAT' : ''}
-            {col.column_id === 'col_11_4' ? 'STAT' : ''}
-            {col.column_id === 'col_11_5' ? 'STAT' : ''}
-            {col.column_id === 'col_11_6' ? 'STAT' : ''}
-            {col.column_id === 'col_11_7' ? 'STAT' : ''}
-            {col.column_id === 'col_11_8' ? 'STAT' : ''}
-            {col.column_id === 'col_11_9' ? 'STAT' : ''}
-            {col.column_id === 'col_11_10' ? 'STAT' : ''}
-            {col.column_id === 'col_11_11' ? 'STAT' : ''}
+            {/* {col.column_id === 'col_11_1' ? '0%' : ''}
+            {col.column_id === 'col_11_2' ? '0%' : ''}
+            {col.column_id === 'col_11_3' ? '0%' : ''}
+            {col.column_id === 'col_11_4' ? '0%' : ''}
+            {col.column_id === 'col_11_5' ? '0%' : ''}
+            {col.column_id === 'col_11_6' ? '0%' : ''}
+            {col.column_id === 'col_11_7' ? '0%' : ''}
+            {col.column_id === 'col_11_8' ? '0%' : ''}
+            {col.column_id === 'col_11_9' ? '0%' : ''}
+            {col.column_id === 'col_11_10' ? '0%' : ''}
+            {col.column_id === 'col_11_11' ? '0%' : ''} */}
 
             {/* Button 12 columns */}
-            {col.column_id === 'col_12_1' ? 'POWRAT' : ''}
-            {col.column_id === 'col_12_2' ? 'MRKRAT' : ''}
-            {col.column_id === 'col_12_3' ? 'SPDRTG' : ''}
-            {col.column_id === 'col_12_4' ? 'TEMPO1' : ''}
-            {col.column_id === 'col_12_5' ? 'TEMPO2' : ''}
-            {col.column_id === 'col_12_6' ? 'TEMPO3' : ''}
-            {col.column_id === 'col_12_7' ? 'TEMPO4' : ''}
-            {col.column_id === 'col_12_8' ? 'VDL' : ''}
-            {col.column_id === 'col_12_9' ? 'VDL' : ''}
-            {col.column_id === 'col_12_10' ? 'VDL' : ''}
-            {col.column_id === 'col_12_11' ? 'VDL' : ''}
+            {/* {col.column_id === 'col_12_1' ? '0%' : ''}
+            {col.column_id === 'col_12_2' ? '0%' : ''}
+            {col.column_id === 'col_12_3' ? '0%' : ''}
+            {col.column_id === 'col_12_4' ? '0%' : ''}
+            {col.column_id === 'col_12_5' ? '0%' : ''}
+            {col.column_id === 'col_12_6' ? '0%' : ''}
+            {col.column_id === 'col_12_7' ? '0%' : ''}
+            {col.column_id === 'col_12_8' ? '0%' : ''}
+            {col.column_id === 'col_12_9' ? '0%' : ''}
+            {col.column_id === 'col_12_10' ? '0%' : ''}
+            {col.column_id === 'col_12_11' ? '0%' : ''} */}
 
             {/* Button 13 columns */}
-            {col.column_id === 'col_13_1' ? 'SA(X)' : ''}
-            {col.column_id === 'col_13_2' ? 'RAS' : ''}
-            {col.column_id === 'col_13_3' ? 'DUE' : ''}
-            {col.column_id === 'col_13_4' ? 'WNC' : ''}
-            {col.column_id === 'col_13_5' ? 'EXE' : ''}
-            {col.column_id === 'col_13_6' ? 'WHT' : ''}
-            {col.column_id === 'col_13_7' ? 'MMI' : ''}
-            {col.column_id === 'col_13_8' ? 'PAT' : ''}
-            {col.column_id === 'col_13_9' ? 'HAF' : ''}
-            {col.column_id === 'col_13_10' ? 'BIA' : ''}
-            {col.column_id === 'col_13_11' ? 'QRR' : ''}
-            {col.column_id === 'col_13_12' ? 'ESD' : ''}
-            {col.column_id === 'col_13_13' ? 'EOV' : ''}
-            {col.column_id === 'col_13_14' ? '+' : ''}
-            {col.column_id === 'col_13_15' ? 'INJ' : ''}
-            {col.column_id === 'col_13_16' ? 'HDM' : ''}
-            {col.column_id === 'col_13_17' ? 'COM' : ''}
+            {/* {col.column_id === 'col_13_1' ? '0%' : ''}
+            {col.column_id === 'col_13_2' ? '0%' : ''}
+            {col.column_id === 'col_13_3' ? '0%' : ''}
+            {col.column_id === 'col_13_4' ? '0%' : ''}
+            {col.column_id === 'col_13_5' ? '0%' : ''}
+            {col.column_id === 'col_13_6' ? '0%' : ''}
+            {col.column_id === 'col_13_7' ? '0%' : ''}
+            {col.column_id === 'col_13_8' ? '0%' : ''}
+            {col.column_id === 'col_13_9' ? '0%' : ''}
+            {col.column_id === 'col_13_10' ? '0%' : ''}
+            {col.column_id === 'col_13_11' ? '0%' : ''}
+            {col.column_id === 'col_13_12' ? '0%' : ''}
+            {col.column_id === 'col_13_13' ? '0%' : ''}
+            {col.column_id === 'col_13_14' ? '0%' : ''}
+            {col.column_id === 'col_13_15' ? '0%' : ''}
+            {col.column_id === 'col_13_16' ? '0%' : ''}
+            {col.column_id === 'col_13_17' ? '0%' : ''} */}
           </span>
         </Cell>
       ))}

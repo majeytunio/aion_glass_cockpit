@@ -402,7 +402,7 @@ export const ColumnHeader = () => {
           align={col.align || 'center'}
           cssClasses="border border-transparent justify-center items-center"
         >
-          <span className="font-bold text-[12pt] whitespace-nowrap overflow-hidden text-ellipsis" 
+          <span className="font-bold text-[10pt] whitespace-nowrap overflow-hidden text-ellipsis" 
                 title={col.label}>
             {col.label}
           </span>

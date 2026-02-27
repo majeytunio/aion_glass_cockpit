@@ -150,20 +150,62 @@ export const UpcomingTile = ({
   };
 
   // Get racing code icon (using Unicode symbols as placeholders - replace with actual icons)
+  // const getRacingCodeIcon = (code: string) => {
+  //   switch (code) {
+  //     case 'TH':
+  //       return '<🐎>'; // Thoroughbred - Horse
+  //     case 'HN':
+  //       return '🏇'; // Harness - Harness racing
+  //     case 'GR':
+  //       return '🐕'; // Greyhound - Dog
+  //     case 'KY':
+  //       return '🛥️'; // Kyotei - Boat/Motorboat
+  //     case 'KE':
+  //       return '🚲'; // Keirin - Bicycle
+  //     default:
+  //       return '🐎';
+  //   }
+  // };
+
+
+
+  // const getRacingCodeIcon = (code: string) => {
+  //   switch (code) {
+  //     case 'TH':
+  //       return '🐎'; // Thoroughbred - Horse
+  //     case 'HN':
+  //       return '🏇'; // Harness - Harness racing
+  //     case 'GR':
+  //       return '🐕'; // Greyhound - Dog
+  //     case 'KY':
+  //       return '🛥️'; // Kyotei - Boat/Motorboat
+  //     case 'KE':
+  //       return '🚲'; // Keirin - Bicycle
+  //     default:
+  //       return '🐎';
+  //   }
+  // };
+
+
+  // Get racing code icon (Returning JSX instead of strings)
   const getRacingCodeIcon = (code: string) => {
+    // Shared classes for all racing icons
+    const iconClass = "h-6 w-6 object-contain"; 
+
     switch (code) {
       case 'TH':
-        return '🐎'; // Thoroughbred - Horse
+        return <img src="/button_6.png" alt="Thoroughbred" className={iconClass} />;
       case 'HN':
-        return '🏇'; // Harness - Harness racing
+        return <img src="/button_7.png" alt="Harness" className={iconClass} />;
       case 'GR':
-        return '🐕'; // Greyhound - Dog
+        return <img src="/button_8.png" alt="Greyhound" className={iconClass} />;
       case 'KY':
-        return '🛥️'; // Kyotei - Boat/Motorboat
+        return <img src="/Kyotei_Icon_96x96.png" alt="Kyotei" className={iconClass} />;
       case 'KE':
-        return '🚲'; // Keirin - Bicycle
+        return <img src="/Keirin_Icon_96x96.png" alt="Keirin" className={iconClass} />;
       default:
-        return '🐎';
+        // Default horse icon
+        return <img src="/button_6.png" alt="Racing" className={iconClass} />;
     }
   };
 
