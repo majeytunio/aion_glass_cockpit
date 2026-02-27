@@ -3,7 +3,7 @@ export const runners = [
   {
     id: 1,
     number: 1,
-    name: "COMPITETOR",
+    name: "COMPETITOR",
     trainer: "Z. Trainer",
     jockey: "A. Jockey",
     form: "1-2-3",

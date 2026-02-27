@@ -683,7 +683,7 @@ export const DateSelector = ({ label, value, onChange }: DateSelectorProps) => {
           onDown={() => adjust('year', -1)} 
         />
 
-        <div className="mx-3 text-md">/</div>
+        <div className="text-black mx-2 text-sm font-light">/</div>
 
         {/* MONTH */}
         <SpinnerGroup 
@@ -693,7 +693,7 @@ export const DateSelector = ({ label, value, onChange }: DateSelectorProps) => {
           onDown={() => adjust('month', -1)} 
         />
 
-        <div className="text-black mx-3 text-lg font-light">/</div>
+        <div className="text-black mx-2 text-sm font-light">/</div>
 
         {/* DAY */}
         <SpinnerGroup 
@@ -711,9 +711,9 @@ export const DateSelector = ({ label, value, onChange }: DateSelectorProps) => {
 
 const SpinnerGroup = ({ id, value, onUp, onDown }: any) => (
   <div className="flex items-center gap-1">
-    <div className="flex flex-col items-center min-w-[22px]">
+    <div className="flex flex-col items-center min-w-[18px]">
       <span className="text-[9px] leading-none mb-1 select-none">{id}</span>
-      <span className="text-[11px] font-bold tabular-nums tracking-tighter">{value}</span>
+      <span className="text-[20px] font-bold tabular-nums tracking-tighter">{value}</span>
     </div>
     <div className="flex flex-col -space-y-1 justify-center">
       <button 

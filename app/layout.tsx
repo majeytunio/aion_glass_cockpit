@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aion Glass Cockpit",
-  description: "Aion Glass Cockpit is a trading platform that provides real-time financial data and analytics to traders. It is designed to be user-friendly and customizable, allowing traders to create their own dashboards and layouts.",
+  title: "Aion Trading",
+  description: "Aion Trading is a trading platform that provides real-time financial data and analytics to traders. It is designed to be user-friendly and customizable, allowing traders to create their own dashboards and layouts.",
 };
 
 export default function RootLayout({

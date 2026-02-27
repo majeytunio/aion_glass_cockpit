@@ -2337,7 +2337,8 @@ export const ColumnRealm = () => {
                     <div className="flex items-center justify-start h-full w-full cursor-pointer"
                     onClick={() => window.location.href = '/runners/' + (runnerData[index]?.id || '')}
                     >
-                      <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
+                      {/* <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" /> */}
+                      <img src={'/button_6.png'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
                       {/* <span className="text-sm">{runnerData[index]?.name.toUpperCase() || `Runner ${index}`}</span> */}
                       <span className="
                       text-md font-semibold cursor-pointer hover:underline
@@ -2610,11 +2611,25 @@ export const ColumnRealm = () => {
                   h-full w-full flex items-center px-2
                   ${col.align === 'left' ? 'justify-start' : col.align === 'center' ? 'justify-center' : 'justify-end'}
                   ${isEvenRow && ![
-                    'col_1_2', 'col_2_2', 'col_3_2', 'col_2_3', 'col_3_3',
-                    'col_1_6', 'col_2_4', 'col_2_5', 'col_2_6', 'col_2_7', 
-                    'col_2_8', 'col_2_9', 'col_2_10', 'col_2_11',
+                    'col_1_2', 'col_2_2', 'col_3_2', 'col_2_3', 'col_3_3', 'col_1_6', 
+                    
+                    'col_2_4', 'col_2_5', 'col_2_6', 'col_2_7', 'col_2_8', 'col_2_9', 'col_2_10', 'col_2_11',
+                    
                     'col_3_4', 'col_3_5', 'col_3_6', 'col_3_7', 'col_3_8',
-                    'col_3_9', 'col_3_10', 'col_3_11', 'col_1_7'
+                    'col_3_9', 'col_3_10', 'col_3_11', 'col_1_7',
+
+
+                    'col_11_1', 'col_11_2', 'col_11_3', 'col_11_4', 'col_11_5', 'col_11_6', 
+                    'col_11_7', 'col_11_8', 'col_11_9', 'col_11_10', 'col_11_11',
+                    
+                    'col_12_1', 'col_12_2', 'col_12_3', 'col_12_4', 'col_12_5', 'col_12_6', 
+                    'col_12_7', 'col_12_8', 'col_12_9', 'col_12_10', 'col_12_11',
+                    
+                    'col_13_1', 'col_13_2', 'col_13_3', 'col_13_4', 'col_13_5', 'col_13_6', 
+                    'col_13_7', 'col_13_8', 'col_13_9', 'col_13_10', 'col_13_11', 'col_13_12', 'col_13_13',
+                    'col_13_14', 'col_13_15', 'col_13_16', 'col_13_17',
+
+
                   ].includes(col.column_id ?? '') 
                     ? 'bg-secondary/20' 
                     : ''}

@@ -142,8 +142,10 @@ export const UpcomingTile = ({
         return 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg';
       case 'JP':
         return 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg';
-      case 'SA':
-        return 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_South_Africa.svg';
+      case 'ZA':
+        return 'https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg';
+      // case 'SA':
+      //   return 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_South_Africa.svg';
       default:
         return 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg';
     }

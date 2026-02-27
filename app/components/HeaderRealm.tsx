@@ -2765,7 +2765,7 @@ const allRaces = [
   { trackCode: 'MAEB', raceNo: 3, ttm: '33m', countryCode: 'JP', racingCode: 'KE', date: '2026-02-28' },
   
   // South Africa - Thoroughbred
-  { trackCode: 'KENI', raceNo: 8, ttm: '22m', countryCode: 'SA', racingCode: 'TH', date: '2026-02-26' },
+  { trackCode: 'KENI', raceNo: 8, ttm: '22m', countryCode: 'ZA', racingCode: 'TH', date: '2026-02-26' },
   
   // Ireland - Thoroughbred
   { trackCode: 'CURR', raceNo: 5, ttm: '18m', countryCode: 'IE', racingCode: 'TH', date: '2026-02-28' },
@@ -2989,13 +2989,15 @@ export const HeaderRealm = () => {
                     : 'opacity-0 pointer-events-none'
                 }`}>
                   {selectedTerritories.length > 0 && (
-                    <span className="bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 rounded">
+                    // <span className="bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 rounded">
+                    <span className="px-2 py-0.5 rounded">
                       Territories: {selectedTerritories.join(', ')}
                     </span>
                   )}
                   
                   {selectedCodes.length > 0 && (
-                    <span className="bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded">
+                    // <span className="bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded">
+                    <span className="px-2 py-0.5 rounded">
                       Codes: {selectedCodes.join(', ')}
                     </span>
                   )}
