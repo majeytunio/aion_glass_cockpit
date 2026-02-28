@@ -2337,7 +2337,7 @@ export const ColumnRealm = () => {
                     <div className="flex items-center justify-start h-full w-full cursor-pointer"
                     onClick={() => window.location.href = '/runners/' + (runnerData[index]?.id || '')}
                     >
-                      {/* <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" /> */}
+                      <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
                       <img src={'/button_6.png'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
                       {/* <span className="text-sm">{runnerData[index]?.name.toUpperCase() || `Runner ${index}`}</span> */}
                       <span className="
