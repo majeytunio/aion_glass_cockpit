@@ -93,9 +93,9 @@ export const RunnerHeader = ({ runnerData }: { runnerData: RunnerRowData }) => {
                 <div className="col-span-1 flex flex-col gap-1 ms-5">
                     <div className="flex items-center gap-3">
                         <img
-                            src="/runner_placeholder.jpeg"
+                            src="/button_6.png"
                             alt="HK Flag"
-                            className="w-20 h-20 rounded-[100%] shadow-md object-cover"
+                            className="w-20 h-20 object-cover"
                         />
                         <span className="text-[20pt] font-black tracking-tight whitespace-nowrap">
                             {/* SHA TIN {runnerData?.name || ''} */}
@@ -206,6 +206,8 @@ export const RunnerHeader = ({ runnerData }: { runnerData: RunnerRowData }) => {
                     alt="Aion Logo"
                     className="w-23 h-23 object-cover"
                     />
+                    {/* <img src={'/button_6.png'} alt={`${runnerData.name}`} className="w-10 h-10 rounded-full mr-2" /> */}
+                      
                 </div>
             </div>
         </div>

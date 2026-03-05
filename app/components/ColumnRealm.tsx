@@ -2338,7 +2338,7 @@ export const ColumnRealm = () => {
                     onClick={() => window.location.href = '/runners/' + (runnerData[index]?.id || '')}
                     >
                       <img src={'/runner_placeholder.jpeg'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
-                      <img src={'/button_6.png'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" />
+                      {/* <img src={'/button_6.png'} alt={`Runner ${index}`} className="w-10 h-10 rounded-full mr-2" /> */}
                       {/* <span className="text-sm">{runnerData[index]?.name.toUpperCase() || `Runner ${index}`}</span> */}
                       <span className="
                       text-md font-semibold cursor-pointer hover:underline

@@ -365,7 +365,7 @@ export const UpcomingTile = ({
 
       {/* BOTTOM ROW: Time Remaining (Left) and Race Number (Right) */}
       <div className="flex justify-between items-end">
-        <div className={`text-xl font-black italic tracking-tighter leading-none ${textColor}`}>
+        <div className={`text-sm font-black italic tracking-tighter leading-none ${textColor}`}>
           {ttm}
         </div>
         <div className="text-lg font-extrabold text-gray-800 leading-none">
