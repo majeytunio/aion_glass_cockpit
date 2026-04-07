@@ -1,5 +1,6 @@
 // app/lib/api.ts
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://3.25.213.38:8000';
+// const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://3.25.213.38:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
 export interface Race {
   trackCode: string;
