@@ -16,7 +16,8 @@ import {
 import Icon from "@mdi/react";
 import { TrackSelector } from './TrackSelector';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://3.25.213.38:8000';
+// const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://3.25.213.38:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 const UI_VERSION = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '_V01';
 
 export const HeaderRealm = () => {
